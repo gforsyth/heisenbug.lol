@@ -35,7 +35,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Array of available values for X
-            const values = ["NaN", "NULL", 0];
+            const values = ["NaN", "NULL", 0, -1];
 
             // Function to get a random value from the array
             function getRandomValue() {
@@ -44,7 +44,7 @@
 
             // Set the initial value
             let currentValue = getRandomValue();
-            document.getElementById('heisenbug-counter').textContent = `It has been ${currentValue} days since the last Heisenbug`;
+            document.getElementById('heisenbug-counter').textContent = `It has been 🦄${currentValue}🦄 days since the last 🦄Heisenbug🦄`;
 
             // Change the value on each page reload
             window.addEventListener('beforeunload', function () {
