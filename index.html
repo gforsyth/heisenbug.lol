@@ -44,7 +44,14 @@
 
             // Set the initial value
             let currentValue = getRandomValue();
-            document.getElementById('heisenbug-counter').textContent = `It has been 🦄${currentValue}🦄 days since the last 🦄Heisenbug🦄`;
+
+            const worksOnMyMachine = Math.random() < 0.2;
+
+            if (worksOnMyMachine) {
+                document.getElementById('heisenbug-counter').textContent = `¯\\_(ツ)_/¯ it works on my machine.`;
+            } else {
+                document.getElementById('heisenbug-counter').textContent = `It has been 🦄${currentValue}🦄 days since the last 🦄Heisenbug🦄`;
+            }
 
             // Change the value on each page reload
             window.addEventListener('beforeunload', function () {
